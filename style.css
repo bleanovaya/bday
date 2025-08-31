@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'jp-font';
+    src: url(assets/font/HanZi.ttf);
+}
+body {
+    background-color: #0d0d0d;
+    margin: 0, auto;
+    padding-top: 150px;
+    color: #fff;
+}
+.fixed-header {
+  position: fixed;
+  margin: 0, auto;
+  top: 0;
+  width: 100%;
+  max-width: 1440px;
+  background: #460000;
+  color: #fff;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.fixed-header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 3.5rem;
+  transition: color 0.3s;
+}
+
+.fixed-header a:hover {
+  color: #ff4e4e;
+}
+.logo {
+    filter: brightness(0) invert(1);
+    max-width: 190px;
+    height: auto;
+}
+h1 {
+    font-family: 'jp-font';
+}
