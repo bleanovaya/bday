@@ -13,7 +13,7 @@
 body {
     background-color: #0d0d0d;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 50px;
     color: #fff;
     justify-content: center;
     flex-direction: column;
@@ -177,8 +177,7 @@ h1 {
   .fixed-header {
     flex-direction: row;
     align-items: center;
-    padding: 1rem;
-    font-size: 15px;
+    padding-left: 7rem;
   }
 
   .fixed-header a {
