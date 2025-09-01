@@ -170,14 +170,16 @@ h1 {
 }
 @media (max-width: 768px) {
   body {
-    padding-top: 80px;
+    padding-top: 0;
     font-size: 16px;
   }
 
   .fixed-header {
     flex-direction: row;
+    position: static;
+    box-shadow: none;
     align-items: center;
-    padding-left: 7rem;
+    padding-left: 6rem;
   }
 
   .fixed-header a {
