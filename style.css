@@ -2,25 +2,43 @@
     font-family: 'jp-font';
     src: url(assets/font/HanZi.ttf);
 }
+@font-face {
+  font-family: 'ket';
+  src: url(assets/font/keetano_katakana.ttf);
+}
+@font-face {
+  font-family: 'en-font';
+  src: url(assets/font/PlaypenSans-VariableFont_wght.ttf);
+}
 body {
     background-color: #0d0d0d;
-    margin: 0, auto;
-    padding-top: 150px;
+    margin: 0;
+    padding-top: 100px;
     color: #fff;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.header-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .fixed-header {
   position: fixed;
-  margin: 0, auto;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 4rem;
   top: 0;
   width: 100%;
-  max-width: 1440px;
-  background: #460000;
+  max-width: 1920px;
+  background: #0d0d0d;
   color: #fff;
-  font-family: 'Zen Maru Gothic', sans-serif;
+  font-family: 'jp-font', sans-serif;
+  font-size: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 2rem;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
@@ -28,7 +46,8 @@ body {
 .fixed-header a {
   color: #fff;
   text-decoration: none;
-  margin-left: 3.5rem;
+  margin-right: 3rem;
+  
   transition: color 0.3s;
 }
 
@@ -36,10 +55,175 @@ body {
   color: #ff4e4e;
 }
 .logo {
-    filter: brightness(0) invert(1);
-    max-width: 190px;
+    max-width: 120px;
+    margin-left: 3rem;
     height: auto;
 }
 h1 {
     font-family: 'jp-font';
+}
+.hero {
+  background: linear-gradient(to bottom, #f3cda1, #f8dbbf);
+  color: #0d0d0d;
+  text-align: center;
+  padding: 120px 20px 80px;
+  position: relative;
+}
+
+.hero-logo {
+  max-width: 200px;
+}
+
+.hero h1 {
+  font-family: 'jp-font', sans-serif;
+  font-size: 72px;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-family: 'jp-font', sans-serif;
+  font-size: 32px;
+  margin-bottom: 0,5rem;
+  color: #0d0d0d;
+}
+
+.date {
+  font-size: 30px;
+  font-family: 'en-font';
+  color: #2b0101;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  background-color: #e23501;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: solid, black, 3px;
+  border-radius: 4px;
+  font-size: 28px;
+  font-family: 'en-font';
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ff2e2e;
+}
+.section.about {
+  background-color: #0d0d0d;;
+  padding: 80px 20px;
+
+  color: #f0e7c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-about {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.test-about {
+  flex: 1;
+  min-width: 280px;
+}
+
+.test-about h2 {
+  font-size: 52px;
+  margin-bottom: 20px;  
+  font-family: 'jp-font', sans-serif;
+  color: #c70000;
+  font-weight: 600;
+}
+
+.test-about p {
+  font-size: 25px;
+  font-family: 'en-font', sans-serif;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.aboout-img {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboout-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.aboout-img img:hover {
+  transform: scale(1.02);
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+    font-size: 16px;
+  }
+
+  .fixed-header {
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    font-size: 15px;
+  }
+
+  .fixed-header a {
+    margin-right: 1.5rem;
+    font-size: 18px;
+  }
+
+  .logo {
+    max-width: 100px;
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .date {
+    font-size: 22px;
+  }
+
+  .cta-button {
+    font-size: 20px;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .container-about {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .test-about h2 {
+    font-size: 36px;
+  }
+
+  .test-about p {
+    font-size: 18px;
+  }
+
+  .aboout-img img {
+    max-width: 50%;
+  }
 }
