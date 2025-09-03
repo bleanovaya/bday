@@ -57,10 +57,11 @@ function updateCountdown() {
   countdown.textContent = `Осталось ${days} дней до Lean-Day`;
 }
 
-updateCountdown();
-setInterval(updateCountdown, 86400000);
+const bgMusic = new Audio('assets/mp3/jptrack.mp3');
 document.querySelector('.cta-button').addEventListener('click', () => {
-  document.getElementById('bg-music').play();
+  bgMusic.loop = true;
+  bgMusic.volume = 0.5;
+  bgMusic.play();
 });
 
 });
