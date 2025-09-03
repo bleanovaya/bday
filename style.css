@@ -296,7 +296,7 @@ h1 {
 }
 
 .item-block img:hover {
-  transform: scale(1.05);
+  transform: scale(1.20);
 }
 .item-block {
   scrollbar-width: none; 
@@ -358,3 +358,116 @@ h1 {
     font-size: 20px;
   }
 }
+.wishlist-section {
+  padding: 80px 20px;
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+.wishlist-section h2 {
+  font-size: 48px;
+  font-family: 'jp-font';
+  color: #d1001f;
+  margin-bottom: 20px;
+}
+
+.wishlist-note {
+  font-size: 25px;
+  font-family: 'en-font';
+  color: #ffdcba;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.wishlist-card {
+  background-color: #690505;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-10px);
+}
+
+.wishlist-card img {
+  width: 100%;
+  height: auto;
+  border: #0d0d0d solid 3px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.wishlist-card h3 {
+  font-size: 28px;
+  font-family: 'en-font';
+  color: #ffb657;
+  margin-bottom: 10px;
+}
+
+.wishlist-card p {
+  font-size: 26px;
+  color: #ffd7a9;
+  font-family: 'en-font';
+  margin-bottom: 20px;
+}
+
+.wishlist-card a {
+  font-size: 24px;
+  color: #ffeac2;
+  font-family: 'jp-font';
+  text-decoration: underline;
+}
+
+.wishlist-button {
+  margin-top: 60px;
+}
+
+.wishlist-button a {
+  display: inline-block;
+  background-color: #86071a;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'jp-font';
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.wishlist-button a:hover {
+  background-color: #a80017;
+}
+@media (max-width: 768px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .wishlist-section h2 {
+    font-size: 36px;
+  }
+
+  .wishlist-note {
+    font-size: 18px;
+  }
+
+  .wishlist-card h3 {
+    font-size: 20px;
+  }
+
+  .wishlist-card p {
+    font-size: 15px;
+  }
+}
+
