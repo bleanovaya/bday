@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btnRight.addEventListener('click', () => {
       track.scrollBy({ left: 310, behavior: 'smooth' });
     });
-
-    // Свайп
     let startX = 0;
     track.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
@@ -40,6 +38,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
   }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+const date = new Date("2025-09-20T18:00:00");
+const countdown = document.getElementById("countdown");
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = date - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  countdown.textContent = `Осталось ${days} дней до Lean-Day`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 86400000);
+document.querySelector('.cta-button').addEventListener('click', () => {
+  document.getElementById('bg-music').play();
+});
+
 });
 
 

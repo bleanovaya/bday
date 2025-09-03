@@ -9,6 +9,9 @@
 <link rel="stylesheet" href="./normalize.css">
 </head>
 <body>
+  <audio id="bg-music" autoplay loop>
+  <source src="assets/mp3/jptrack.mp3" type="audio/mpeg">
+</audio>
     <div class="header-wrapper">
     <header class="fixed-header">
         <img src="assets/icon/icon.ico" alt="logo" class="logo">
@@ -27,7 +30,8 @@
     <h1>Tokyo Contrast</h1>
     <p class="subtitle">Приглашение на день рождения</p>
     <p class="date">20.09.2025</p>
-    <a href="#rsvp" class="cta-button">Принять приглашение</a>
+    <p id="countdown"></p>
+    <a href="#RSVP" class="cta-button">Принять приглашение</a>
   </div>
 </section>
 <section id="about" class="section about">
